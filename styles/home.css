@@ -84,13 +84,13 @@ button,
 }
 
 .ball.top {
-    top: -50rem;
-    width: 65.0rem;
-    right: -42rem;
+    top: -46rem;
+    width: 63.0rem;
+    right: -35rem;
     height: 63.3rem;
 }
 
 .ball.bottom {
-    bottom: -16rem;
-    right: 1rem;
+    bottom: -15rem;
+    right: 5.6rem;
 }
