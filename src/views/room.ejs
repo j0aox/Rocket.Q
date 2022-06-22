@@ -64,89 +64,47 @@
                 <h2 class="sr-only">Perguntas da comunidade</h2>
                 <div class="questions">
 
-                    <div class="question-wrapper">
-                        <div class="question-content">
-                            <div class="user">
-                                <img src="/images/user.svg" alt="Avatar">
+                    <% questions.forEach(question=> { %>
+                        <div class="question-wrapper">
+                            <div class="question-content">
+                                <div class="user">
+                                    <img src="/images/user.svg" alt="Avatar">
+                                </div>
+                                <div class="question">
+                                    <p>
+                                        <%= question.title %>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="question">
-                                <p>Qual a diferença entre const, var e let no JavaScript?</p>
+                            <div class="actions">
+                                <a href="#" class="check" data-id="2">
+                                    <img src="/images/check.svg" alt="Marcar como lida">
+                                    Marcar como lida
+                                </a>
+                                <a href="#" class="delete" data-id="2">
+                                    <img src="/images/trash.svg" alt="Excluir">
+                                    Excluir
+                                </a>
                             </div>
                         </div>
-                        <div class="actions">
-                            <a href="#" class="check" data-id="2">
-                                <img src="/images/check.svg" alt="Marcar como lida">
-                                Marcar como lida
-                            </a>
-                            <a href="#" class="delete" data-id="2">
-                                <img src="/images/trash.svg" alt="Excluir">
-                                Excluir
-                            </a>
-                        </div>
-                    </div>
+                        <% }); %>
 
-                    <div class="question-wrapper">
-                        <div class="question-content">
-                            <div class="user">
-                                <img src="/images/user.svg" alt="Avatar">
+                            <div class="question-wrapper read">
+                                <div class="question-content">
+                                    <div class="user">
+                                        <img src="/images/user.svg" alt="Avatar">
+                                    </div>
+                                    <div class="question">
+                                        <p>o que é Script?</p>
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="delete" data-id="1">
+                                        <img src="/images/trash.svg" alt="Excluir">
+                                        Excluir
+                                    </a>
+                                </div>
                             </div>
-                            <div class="question">
-                                <p>O que é JavaScript?</p>
-                            </div>
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="check" data-id="3">
-                                <img src="/images/check.svg" alt="Marcar como lida">
-                                Marcar como lida
-                            </a>
-                            <a href="#" class="delete" data-id="3">
-                                <img src="/images/trash.svg" alt="Excluir">
-                                Excluir
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="question-wrapper">
-                        <div class="question-content">
-                            <div class="user">
-                                <img src="/images/user.svg" alt="Avatar">
-                            </div>
-                            <div class="question">
-                                <p>Você já sabe quais as bases você precisa melhorar para alcançar o seu próximo nível
-                                    com maestria? Deiniu o seu foco e objetivo para seguir em frente? Estou curioso e
-                                    embasbacada com sua perseverança por ter alcançado a terceira aula e sei que vai
-                                    continuar ate o fim, então responde aí pra gente!!</p>
-                            </div>
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="check" data-id="4">
-                                <img src="/images/check.svg" alt="Marcar como lida">
-                                Marcar como lida
-                            </a>
-                            <a href="#" class="delete" data-id="4">
-                                <img src="/images/trash.svg" alt="Excluir">
-                                Excluir
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="question-wrapper read">
-                        <div class="question-content">
-                            <div class="user">
-                                <img src="/images/user.svg" alt="Avatar">
-                            </div>
-                            <div class="question">
-                                <p>o que é Script?</p>
-                            </div>
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="delete" data-id="1">
-                                <img src="/images/trash.svg" alt="Excluir">
-                                Excluir
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
             </section>
         </main>
