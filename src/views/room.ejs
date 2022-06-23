@@ -64,6 +64,10 @@
                 <h2 class="sr-only">Perguntas da comunidade</h2>
                 <div class="questions">
 
+                    <% if (isNoQuestions) { %>
+                        <%- include('parts/no-question') %>
+                    <% } %>
+
                     <% questions.forEach(question=> { %>
                         <div class="question-wrapper">
                             <div class="question-content">
@@ -87,28 +91,28 @@
                                 </a>
                             </div>
                         </div>
-                        <% }); %>
+                    <% }); %>
 
-                            <% questionsRead.forEach(questionRead=> { %>
-                                <div class="question-wrapper read">
-                                    <div class="question-content">
-                                        <div class="user">
-                                            <img src="/images/user.svg" alt="Avatar">
-                                        </div>
-                                        <div class="question">
-                                            <p>
-                                                <%= questionRead.title %>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="actions">
-                                        <a href="#" class="delete" data-id="<%= questionRead.id %>">
-                                            <img src="/images/trash.svg" alt="Excluir">
-                                            Excluir
-                                        </a>
-                                    </div>
+                    <% questionsRead.forEach(questionRead=> { %>
+                        <div class="question-wrapper read">
+                            <div class="question-content">
+                                <div class="user">
+                                    <img src="/images/user.svg" alt="Avatar">
                                 </div>
-                                <% }) %>
+                                <div class="question">
+                                    <p>
+                                        <%= questionRead.title %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a href="#" class="delete" data-id="<%= questionRead.id %>">
+                                    <img src="/images/trash.svg" alt="Excluir">
+                                    Excluir
+                                </a>
+                            </div>
+                        </div>
+                    <% }) %>
 
                 </div>
             </section>
